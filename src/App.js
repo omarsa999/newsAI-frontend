@@ -6,9 +6,9 @@ import Posts from "./components/Posts/Posts"
 import Form from "./components/Form/Form"
 import { getPosts } from "./actions/posts"
 import useStyles from "./styles"
-import memories from "./images/memories.png"
 
 import HeadLine from "./components/Headline/Headline"
+import Weather from "./components/Weather/Weather"
 
 const App = () => {
   const [currentId, setCurrentId] = useState(0)
@@ -23,14 +23,15 @@ const App = () => {
     <div>
       <div class="head">
         <div class="headerobjectswrapper">
-          <div class="weatherforcastbox">
+          <Weather />
+          {/* <div class="weatherforcastbox">
             <span>
               Weatherforcast for the next 24 hours: Plenty of Sunshine
             </span>
             <br />
             <span>Wind: 7km/h SSE; Ther: 21°C; Hum: 82%</span>
-          </div>
-          <header>NewsAI: Israel</header>
+          </div> */}
+          <header>News-AI: Israel</header>
         </div>
 
         <div class="subhead">
