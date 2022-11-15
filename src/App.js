@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { Container, AppBar, Typography, Grow, Grid } from "@material-ui/core"
 import { useDispatch } from "react-redux"
+import PulseLoader from "react-spinners/ClipLoader"
 
 import Posts from "./components/Posts/Posts"
 import Form from "./components/Form/Form"
@@ -16,11 +17,19 @@ const App = () => {
   const dispatch = useDispatch()
   const classes = useStyles()
 
+  const [isLoading, setIsloading] = useState(true)
+  useEffect(() => {
+    setIsloading(false)
+  }, [])
+
   useEffect(() => {
     dispatch(getPosts())
   }, [currentId, dispatch])
 
   const datea = moment().format("llll")
+
+  // if (isLoading) return <Loading />
+
   return (
     <div>
       <div class="head">
@@ -43,12 +52,22 @@ const App = () => {
         </div>
       </div>
 
-      <div class="collumns">
-        <div>
-          <HeadLine />
+      {isLoading ? (
+        <PulseLoader
+          color="#d63636"
+          margin={5}
+          size={30}
+          speedMultiplier={1.5}
+        />
+      ) : (
+        <div class="collumns">
+          <div>
+            <HeadLine />
+          </div>
         </div>
+      )}
 
-        {/* <div class="collumn">
+      {/* <div class="collumn">
           <div class="head">
             <span class="headline hl3">When darkness overspreads my eyes</span>
             <p>
@@ -75,7 +94,6 @@ const App = () => {
             infinite God!
           </p>
         </div> */}
-      </div>
     </div>
 
     // the old version
