@@ -9,6 +9,7 @@ import useStyles from "./styles"
 
 import HeadLine from "./components/Headline/Headline"
 import Weather from "./components/Weather/Weather"
+import moment from "moment"
 
 const App = () => {
   const [currentId, setCurrentId] = useState(0)
@@ -19,11 +20,12 @@ const App = () => {
     dispatch(getPosts())
   }, [currentId, dispatch])
 
+  const datea = moment().format("llll")
   return (
     <div>
       <div class="head">
         <div class="headerobjectswrapper">
-          <Weather />
+          {/* <Weather /> */}
           {/* <div class="weatherforcastbox">
             <span>
               Weatherforcast for the next 24 hours: Plenty of Sunshine
@@ -35,8 +37,9 @@ const App = () => {
         </div>
 
         <div class="subhead">
-          IF IT'S NOT HERE, IT'S NOT IMPORTANT - Save your time, - Thursday
-          August 30, 1978 - Seven Pages
+          IF IT'S NOT HERE, IT'S NOT IMPORTANT - {datea}
+          {/* Thursday */}
+          {/* August 30, 1978  */}
         </div>
       </div>
 

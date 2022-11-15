@@ -220,7 +220,8 @@ p {
 }
 .collumn .figcaption {
   font-style: italic;
-  font-size: 12px;
+  text-align: center;
+  font-size: 14px;
 }
 .media {
   -webkit-filter: sepia(80%) contrast(1) opacity(0.8);
