@@ -12,7 +12,7 @@ const Headline = () => {
           <div class="head">
             <span class="headline hl3">{post.title}</span>
             <p>
-              <span class="headline hl4">by JOHANN WOLFGANG VON GOETHE</span>
+              <span class="headline hl4">{post.author}</span>
             </p>
           </div>
           When, while the lovely valley teems with vapour around me, and the
@@ -35,7 +35,7 @@ const Headline = () => {
             infinite God!
           </p>
           <figure class="figure">
-            <img class="media" src={post.author} alt="" />
+            <img class="media" src={post.media} alt="" />
             <figcaption class="figcaption">
               Hermine hoping for courage.
             </figcaption>
