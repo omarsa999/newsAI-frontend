@@ -17,9 +17,9 @@ const App = () => {
   const dispatch = useDispatch()
   const classes = useStyles()
 
-  const [isLoading, setIsloading] = useState(false)
+  const [isLoading, setIsloading] = useState(true)
   useEffect(() => {
-    setIsloading(true)
+    setIsloading(false)
   }, [])
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const App = () => {
     <div>
       <div class="head">
         <div class="headerobjectswrapper">
-          <Weather />
+          {/* <Weather /> */}
           {/* <div class="weatherforcastbox">
             <span>
               Weatherforcast for the next 24 hours: Plenty of Sunshine
@@ -52,7 +52,7 @@ const App = () => {
         </div>
       </div>
 
-      {!isLoading ? (
+      {isLoading ? (
         <PulseLoader
           color="#d63636"
           margin={5}

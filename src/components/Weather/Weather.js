@@ -21,7 +21,7 @@ const Weather = () => {
         const resopnse = await axios.request(options).then((res) => {
           console.log(res)
           setWdata(res.data.current)
-          // console.log(res.data.current)
+          console.log(res.data.current)
         })
       } catch (err) {
         console.log(err)
