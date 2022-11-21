@@ -9,8 +9,9 @@ import { getPosts } from "./actions/posts"
 import useStyles from "./styles"
 
 import HeadLine from "./components/Headline/Headline"
-import Weather from "./components/Weather/Weather"
+// import Weather from "./components/Weather/Weather"
 import moment from "moment"
+import SkalitonComp from "./components/SkalitonComp/SkalitonComp"
 
 const App = () => {
   const [currentId, setCurrentId] = useState(0)
@@ -62,7 +63,8 @@ const App = () => {
       ) : (
         <div class="collumns">
           <div>
-            <HeadLine />
+            {/* <HeadLine /> */}
+            <SkalitonComp />
           </div>
         </div>
       )}

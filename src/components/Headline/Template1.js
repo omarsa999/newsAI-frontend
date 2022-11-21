@@ -18,7 +18,9 @@ const Template1 = ({ post }) => {
       <p>{post.postBody}</p>
       <figure class="figure">
         <img class="media" src={post.thumb} alt="" />
-        <figcaption class="figcaption">Hermine hoping for courage.</figcaption>
+        <figcaption class="figcaption">
+          all rights reserved to the respective owners
+        </figcaption>
       </figure>
 
       <p>{paragraph1.slice(0, 1)}</p>
