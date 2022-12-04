@@ -63,8 +63,8 @@ const App = () => {
       ) : (
         <div class="collumns">
           <div>
-            {/* <HeadLine /> */}
-            <SkalitonComp />
+            <HeadLine />
+            {/* <SkalitonComp /> */}
           </div>
         </div>
       )}
